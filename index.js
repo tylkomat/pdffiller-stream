@@ -1,5 +1,5 @@
 var spawn = require('child_process').spawn,
-    fdf = require("./fdf.js"),
+    fdf = require('./fdf.js'),
     _ = require('lodash'),
     fs = require('fs');
 
@@ -95,11 +95,12 @@ var pdffiller = {
 
             this.generateFieldJson(sourceFile, nameRegex).then(function (_form_fields) {
 
-                var _keys = _.map(_form_fields, 'title'),
+                /*var _keys = _.map(_form_fields, 'title'),
                     _values = _.map(_form_fields, 'fieldValue'),
                     jsonObj = _.zipObject(_keys, _values);
 
-                resolve(jsonObj);
+                resolve(jsonObj);*/
+                resolve(this.convFieldJson2FDF(_form_fields));
 
             }).catch(function (err) {
 

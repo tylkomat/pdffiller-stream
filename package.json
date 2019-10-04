@@ -20,7 +20,8 @@
     "pdf"
   ],
   "dependencies": {
-    "lodash": "^4.17.4"    
+    "lodash": "~4.17.11",
+    "iconv": "*"
   },
   "author": {
     "name": "original: John Taylor and David Baldwynn; stream fork: Jason Phillips"
